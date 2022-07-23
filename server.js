@@ -39,7 +39,8 @@ app.get('/notes', (req, res) => {
 
 // return the db.json file
 app.get('/api/notes', (req, res) => {
-    return res.json(notesdb);
+    let db = JSON.parse(fs.readFileSync('./db/db.json', 'utf8'));
+    res.json(db);
 });
 
 // return index html for any other urls

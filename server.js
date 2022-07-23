@@ -2,7 +2,6 @@ const fs = require('fs');
 const path = require('path');
 const express = require('express');
 const notesdb = require('./db/db.json');
-const res = require('express/lib/response');
 
 const PORT = process.env.PORT || 3003;
 const app = express();
@@ -19,8 +18,9 @@ app.post('/api/notes', (req, res) => {
     console.log('/api/notes post was hit');
     let note = req.body;
     let noteList = JSON.parse(fs.readFileSync('./db/db.json', 'utf8'));
-
-    note.id = note.length;
+    let length = noteList.length;
+    
+    note.id = length;
     noteList.push(note);
     fs.writeFileSync('./db/db.json', JSON.stringify(noteList));
     res.json(noteList);

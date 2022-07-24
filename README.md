@@ -23,3 +23,4 @@ A simple application where you can write and save notes. Notes can also be delet
 - Click red trash button to delete a note that was saved
 
 ## Screenshot
+<img width="1262" alt="Screen Shot 2022-07-23 at 7 01 00 PM" src="https://user-images.githubusercontent.com/104178313/180627338-b8673a3d-f1ad-4fb8-bba3-4bc83163fdae.png">
